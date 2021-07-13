@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ArrayListDemo {
+
     public static void main(String[] args) {
         // initialize empty array list (there are no elements at all)
         ArrayList<Integer> arrayList1 = new ArrayList<>();
@@ -14,6 +15,15 @@ public class ArrayListDemo {
         arrayList1.add(3);
         arrayList1.add(4);
         arrayList1.add(5);
+
+        System.out.println(arrayList1);
+        System.out.println(arrayList1.size());
+
+        System.out.println("Removing");
+        arrayList1.remove(Integer.valueOf(3));
+
+        System.out.println(arrayList1);
+        System.out.println(arrayList1.size());
 
         // change element at index
         arrayList1.set(1, 20);
@@ -43,5 +53,62 @@ public class ArrayListDemo {
 
         //print array on the console
         System.out.println(arrayList3);
+
+        System.out.println("Loops demo:");
+        ArrayList<String> words = new ArrayList<>();
+
+        words.add("Apple");
+        words.add("Banana");
+        words.add("Poison");
+        words.add("Grapefruit");
+
+        // will print Apple, Banana
+        for (int i = 0; i < words.size(); i++) {
+            if (words.get(i).equals("Poison")) {
+                break;
+            }
+            System.out.println("Eating " + words.get(i));
+        }
+
+        // will print Apple, Banana, Grapefruit
+        for (int i = 0; i < words.size(); i++) {
+            if (words.get(i).equals("Poison")) {
+                continue;
+            }
+            System.out.println("Eating " + words.get(i));
+        }
+
+        for (int i = words.size() - 1; i >= 0; i--) {
+            System.out.println(words.get(i));
+        }
+
+        for (int i = 1; i < words.size(); i = i * 2) {
+            System.out.println(words.get(i));
+        }
+
+        for (String word : words) {
+            System.out.println(word);
+        }
+
+        String input = scanner.nextLine();
+
+        while (!input.equals("end")) {
+            words.add(input);
+            input = scanner.nextLine();
+        }
+
+        System.out.println(words);
+
+        while (true) {
+            input = scanner.nextLine();
+            if (input.equals("end")) {
+                break;
+            }
+            words.add(input);
+        }
+
+        System.out.println(words);
+
     }
+
 }

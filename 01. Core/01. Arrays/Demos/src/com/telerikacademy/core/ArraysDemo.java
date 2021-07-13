@@ -38,11 +38,12 @@ public class ArraysDemo {
         // 1 2 3 4 5
         System.out.println("Enter array on a single line using space for delimiter:");
         line = scanner.nextLine();
-        String[] strArray = line.split(" ");
+        String[] strArray = line.split(" "); // ["1", "2", "3", "4", "5"]
         int[] array5 = new int[strArray.length];
         for (int i = 0; i < strArray.length; i++) {
             array5[i] = Integer.parseInt(strArray[i]);
         }
+        // array5 = [1, 2, 3, 4, 5]
 
         // print array on the console
         for (int i = 0; i < array5.length; i++) {
@@ -52,5 +53,22 @@ public class ArraysDemo {
 
         //print array on the console
         System.out.println(Arrays.toString(array5));
+
+        System.out.println("Hello");
+        System.out.println("Todor");
+        // Hello
+        // Todor
+
+        System.out.print("Hello");
+        System.out.print("Todor");
+        // HelloTodor
+
+        String name = "Todor";
+        System.out.printf("Hello %s %d %f %.2f %n", name, 25, 2.5000, 2.5000);
+        // Hello Todor 25 2.5000 2.50
+
+        int[] array = new int[2]; // int = 0, {0, 0}
+        boolean[] booleans = new boolean[2]; // boolean = false {false, false}
+        System.out.println(array[array.length - 1]);
     }
 }

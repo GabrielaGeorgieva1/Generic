@@ -14,6 +14,8 @@ public class MultidimensionalArraysDemo {
         // |1 |2 |3 |
         // |4 |5 |6 |
         // |7 |8 |9 |
+        // number of rows = length of matrix2
+        // matrix[2][0]
         int[][] matrix2 = {
                 {1, 2, 3},
                 {4, 5, 6},
@@ -25,9 +27,9 @@ public class MultidimensionalArraysDemo {
         // |6 |8 |10|
         // |12|14|16|
         int[][] matrix3 = new int[3][3];
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                matrix3[i][j] = i * 3 * 2 + j * 2;
+        for (int row = 0; row < 3; row++) {
+            for (int col = 0; col < 3; col++) {
+                matrix3[row][col] = row * 3 * 2 + col * 2;
             }
         }
 
