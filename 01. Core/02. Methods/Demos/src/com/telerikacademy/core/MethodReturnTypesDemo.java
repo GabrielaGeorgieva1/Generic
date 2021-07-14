@@ -50,4 +50,5 @@ public class MethodReturnTypesDemo {
         System.out.printf("Hello, %s!%n", name);
         System.out.println("Good luck in the Alpha program!");
     }
+
 }

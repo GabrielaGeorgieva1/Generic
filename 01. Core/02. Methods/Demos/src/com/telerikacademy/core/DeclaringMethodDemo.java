@@ -1,6 +1,7 @@
 package com.telerikacademy.core;
 
 public class DeclaringMethodDemo {
+
     public static void main(String[] args) {
         // here we call a method that doesn't return a result
         printMessage();
@@ -8,6 +9,18 @@ public class DeclaringMethodDemo {
         // here we call a method that returns a result that se save in a variable
         String greeting = getGreetingMessage();
         System.out.println(greeting);
+        String name = "Todor";
+        System.out.printf("Hello, %s. Welcome.", name);
+
+        System.out.printf(getFormattedGreetingMessage(), getStudentName());
+    }
+
+    public static String getStudentName() {
+        return "Todor";
+    }
+
+    public static String getFormattedGreetingMessage() {
+        return "Hello, %s. Welcome to Telerik Academy.";
     }
 
     // this is a declaration of a method that executes some code and doesn't return a result
@@ -20,4 +33,5 @@ public class DeclaringMethodDemo {
     public static String getGreetingMessage() {
         return "Good luck in the Alpha program!";
     }
+
 }

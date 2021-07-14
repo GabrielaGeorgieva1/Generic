@@ -1,10 +1,12 @@
 package com.telerikacademy.core;
 
 public class MethodVarargsDemo {
-    public static void main(String[] args) {
+
+    public static void main(String... args) {
         System.out.println(sum());
         System.out.println(sum(1));
         System.out.println(sum(1, 2, 3));
+        System.out.println(sum(1, 2, 3, 4, 5, 6, 7));
 
         greet("Hello");
         greet("Hi", "Ivan", "Gosho", "Misho");
@@ -28,4 +30,5 @@ public class MethodVarargsDemo {
             System.out.printf("%s, %s!%n", greeting, name);
         }
     }
+
 }

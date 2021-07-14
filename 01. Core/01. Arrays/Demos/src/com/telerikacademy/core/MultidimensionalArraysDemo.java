@@ -3,6 +3,7 @@ package com.telerikacademy.core;
 import java.util.Scanner;
 
 public class MultidimensionalArraysDemo {
+
     public static void main(String[] args) {
         // initialize matrix 3x3 (all equal to 0)
         // |0 |0 |0 |
@@ -51,12 +52,37 @@ public class MultidimensionalArraysDemo {
             }
         }
 
-        // print matrix on the console
+        // print matrix on the console after reading it
+        printMatrix(matrix4);
+
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                System.out.printf("%d ", matrix4[i][j]);
+                matrix4[i][j] = matrix4[i][j] * 2;
+            }
+        }
+
+        // print matrix on the console after doubling each element
+        printMatrix(matrix4);
+
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (matrix4[i][j] % 2 != 0) {
+                    matrix4[i][j] = -1;
+                }
+            }
+        }
+
+        // print matrix on the console after leaving only even numbers
+        printMatrix(matrix4);
+    }
+
+    public static void printMatrix(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.printf("| %d |", matrix[i][j]);
             }
             System.out.println();
         }
     }
+
 }
