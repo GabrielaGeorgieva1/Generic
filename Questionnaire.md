@@ -11,6 +11,7 @@ These are the theoretical questions that will most likely be asked during the pr
 #### Questions that you must be able to answer in detail
 
 - What is Java?
+  - Java is objected-oriented programming language with general purpose.
 - **What is JDK, JRE and JVM?**
 - Why is `import` in Java?
 - What is Generic type in Java? Can you give an example?
