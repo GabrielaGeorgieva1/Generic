@@ -4,7 +4,7 @@ public class Person {
     public String name;
 
     public Person() {
-        name = "Anonymous";
+        this("Anonymous");
     }
 
     public Person(String personName) {
