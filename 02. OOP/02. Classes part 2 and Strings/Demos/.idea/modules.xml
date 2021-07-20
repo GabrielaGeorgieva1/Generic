@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/02. Static and Final Members/02. Static and Final Members.iml" filepath="$PROJECT_DIR$/02. Static and Final Members/02. Static and Final Members.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03. String Class/03. String Class.iml" filepath="$PROJECT_DIR$/03. String Class/03. String Class.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Demos.iml" filepath="$PROJECT_DIR$/Demos.iml" />
+    </modules>
+  </component>
+</project>
