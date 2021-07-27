@@ -20,7 +20,7 @@ public class Task extends BoardItem {
     public void setAssignee(String assignee) {
         ensureValidAssignee(assignee);
 
-        logEvent(String.format("Assignee changed from %s to %s", this.getAssignee(), assignee));
+        logEvent(String.format("Assignee changed from %s to %s", getAssignee(), assignee));
 
         this.assignee = assignee;
     }

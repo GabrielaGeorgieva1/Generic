@@ -14,11 +14,11 @@ public class BoardItem {
     private Status status;
     private final List<EventLog> history = new ArrayList<>();
 
-    public BoardItem(String title, LocalDate dueDate) {
+    protected BoardItem(String title, LocalDate dueDate) {
         this(title, dueDate, initialStatus);
     }
 
-    public BoardItem(String title, LocalDate dueDate, Status status) {
+    protected BoardItem(String title, LocalDate dueDate, Status status) {
         validateDueDate(dueDate);
         validateTitle(title);
 
@@ -26,7 +26,7 @@ public class BoardItem {
         this.status = status;
         this.dueDate = dueDate;
 
-        this.logEvent(String.format("Item created: %s", this.viewInfo()));
+        logEvent(String.format("Item created: %s", viewInfo()));
     }
 
     public Status getStatus() {
@@ -40,7 +40,7 @@ public class BoardItem {
     private void setTitle(String title) {
         validateTitle(title);
 
-        this.logEvent(String.format("Title changed from %s to %s", this.getTitle(), title));
+        logEvent(String.format("Title changed from %s to %s", getTitle(), title));
 
         this.title = title;
     }
@@ -52,13 +52,13 @@ public class BoardItem {
     public void setDueDate(LocalDate dueDate) {
         validateDueDate(dueDate);
 
-        this.logEvent(String.format("DueDate changed from %s to %s", this.getDueDate(), dueDate));
+        logEvent(String.format("DueDate changed from %s to %s", getDueDate(), dueDate));
 
         this.dueDate = dueDate;
     }
 
     private void setStatus(Status status) {
-        this.logEvent(String.format("Status changed from %s to %s", this.getStatus(), status));
+        logEvent(String.format("Status changed from %s to %s", getStatus(), status));
 
         this.status = status;
     }
@@ -67,7 +67,7 @@ public class BoardItem {
         if (this.status != initialStatus) {
             setStatus(Status.values()[status.ordinal() - 1]);
         } else {
-            this.logEvent(String.format("Can't revert, already at %s", this.getStatus()));
+            logEvent(String.format("Can't revert, already at %s", getStatus()));
         }
     }
 
@@ -75,12 +75,12 @@ public class BoardItem {
         if (this.status != finalStatus) {
             setStatus(Status.values()[status.ordinal() + 1]);
         } else {
-            this.logEvent(String.format("Can't advance, already at %s", this.getStatus()));
+            logEvent(String.format("Can't advance, already at %s", getStatus()));
         }
     }
 
     public String viewInfo() {
-        return String.format("'%s', [%s | %s]", this.title, this.status, this.dueDate);
+        return String.format("'%s', [%s | %s]", title, status, dueDate);
     }
 
     public void displayHistory() {
@@ -90,7 +90,7 @@ public class BoardItem {
     }
 
     protected void logEvent(String event) {
-        this.history.add(new EventLog(event));
+        history.add(new EventLog(event));
     }
 
     private void validateTitle(String title) {
@@ -107,5 +107,4 @@ public class BoardItem {
             throw new IllegalArgumentException("DueDate can't be in the past");
         }
     }
-
 }
