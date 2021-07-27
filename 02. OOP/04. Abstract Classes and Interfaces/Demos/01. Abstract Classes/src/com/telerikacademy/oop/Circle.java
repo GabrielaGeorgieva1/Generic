@@ -18,4 +18,14 @@ public class Circle extends Shape {
     protected double getArea() {
         return Math.PI * radius * radius;
     }
+
+    @Override
+    protected String getShapeName() {
+        return "Circle";
+    }
+
+    @Override
+    protected String additionalInfo() {
+        return String.format("with radius: %.2f", getRadius());
+    }
 }

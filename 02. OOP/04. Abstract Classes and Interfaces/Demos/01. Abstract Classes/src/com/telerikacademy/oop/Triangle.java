@@ -24,4 +24,15 @@ public class Triangle extends Shape {
     protected double getArea() {
         return base * height / 2;
     }
+
+    //todo implement methods - use circle as a template
+    @Override
+    protected String getShapeName() {
+        return null;
+    }
+
+    @Override
+    protected String additionalInfo() {
+        return null;
+    }
 }

@@ -24,4 +24,15 @@ public class Rectangle extends Shape {
     protected double getArea() {
         return width * height;
     }
+
+    //todo implement methods - use circle as a template
+    @Override
+    protected String getShapeName() {
+        return null;
+    }
+
+    @Override
+    protected String additionalInfo() {
+        return null;
+    }
 }
