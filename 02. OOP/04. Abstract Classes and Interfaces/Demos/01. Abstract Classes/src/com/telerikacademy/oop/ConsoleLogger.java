@@ -1,2 +1,8 @@
-package com.telerikacademy.oop;public class ConsoleLogger {
+package com.telerikacademy.oop;
+
+public class ConsoleLogger implements Logger {
+    @Override
+    public void log(String text) {
+        System.out.println(text);
+    }
 }

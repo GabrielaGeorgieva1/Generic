@@ -35,4 +35,8 @@ public class Triangle extends Shape {
     protected String additionalInfo() {
         return null;
     }
+
+    public void displayInfo() {
+        System.out.println("test");
+    }
 }

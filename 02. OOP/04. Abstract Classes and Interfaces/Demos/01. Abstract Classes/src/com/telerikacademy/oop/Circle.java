@@ -28,4 +28,5 @@ public class Circle extends Shape {
     protected String additionalInfo() {
         return String.format("with radius: %.2f", getRadius());
     }
+
 }

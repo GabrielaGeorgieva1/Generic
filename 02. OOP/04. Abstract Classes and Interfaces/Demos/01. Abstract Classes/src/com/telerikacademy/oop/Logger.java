@@ -1,2 +1,5 @@
-package com.telerikacademy.oop;public class Logger {
+package com.telerikacademy.oop;
+
+public interface Logger {
+    void log(String text);
 }
